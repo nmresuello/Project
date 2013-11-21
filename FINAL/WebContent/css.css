@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+
+#page{
+	background-image: url("../images/url1.jpg");
+	background-position:center;
+	border-style:solid;
+	border-color: black;
+	width: 600px;
+	height: auto;
+	}

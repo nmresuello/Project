@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter III:<br> "The Meeting"
+</h2>
+<h3>As soon as the other servants had left, and the house was empty, Cap o' Rushes threw off her cloak and hood of rushes, and dressed in her fine clothes, went to the dance.<br>
+ There she was the most beautiful girl of all. <br>
+The son of her master was at the dance as well. <br>
+He could not take his eyes off the girl, and danced with her all evening.
+</h3>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter3Background");
+	img5 = document.getElementById("Prince");
+	img4 = document.getElementById("Dance");
+	vcon.drawImage(img1,0,0,714,366); //putting background
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); //putting Prince
+	//vcon.drawImage(img4,x1,x2,100,300,350,150,100,200); //putting daughter3	
+	setInterval("anim()",250);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 205; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img5,0,0,100,300,20,150,100,200); //putting Prince
+	vcon.drawImage(img4,x1,y1,205,300,500,150,170,200); //putting daughter3
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter3Background" alt= "" src="Images/Chapter3Background.jpg" width="300" height="300">
+<img style="display:none;" id="Prince" alt="" src="Images/PrincePaintFinal.png"><br>
+<img style="display:none;" id="Dance" alt="" src="Images/DAUGHTER3DANCE.png">
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+<FORM METHOD="LINK" ACTION="TheDaughterChapter3Scene2.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>

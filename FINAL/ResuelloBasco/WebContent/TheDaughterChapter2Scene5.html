@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter II:<br> "The Suffering"
+</h2>
+<h3>So the girl became a scullery maid in the large house. All day long she would scrub and clean. 
+<br>At night she would go to sleep in a little corner of the kitchen.
+The girl would never take her cloak of rushes off, not even at night. 
+<br>If someone asked her name, she wouldn't answer. So, since she wouldn't give a name and she wouldn't take her hood and cloak of rushes off, 
+<br>the other maids began calling her Cap o' Rushes.
+</h3>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter2Background");
+	img5 = document.getElementById("Daughter3");
+	//vcon.drawImage(img1,0,0,714,366); //putting background
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); //putting daughter3
+	setInterval("anim()",400);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 303; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img5,x1,x2,303,300,350,150,170,200); //putting daughter3
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter2Background" alt= "" src="Images/Chapter2Background3.jpg" width="300" height="300">
+<img style="display:none;" id="Daughter3" alt="" src="Images/DAUGHTER3MAID.png"><br>
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+
+
+</font></body><br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+
+<FORM METHOD="LINK" ACTION="TheDaughterChapter2Scene6.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>

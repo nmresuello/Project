@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter 1:<br> "The Questioning"
+</h2>
+<h3>The other maids and servants returned home very excited. 'Why, Cap o' Rushes!' they said. <br>
+'You missed the most beautiful lady there ever was. She danced all evening with the master's son, 
+<br>and then vanished into thin air. Nobody knows where she came from, and where she went off to.'</h3>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter2Background");
+	img5 = document.getElementById("Maid1");
+	img4 = document.getElementById("D3Sleep");
+	//vcon.drawImage(img1,0,0,714,366); //putting background
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); //putting Maid1
+	//vcon.drawImage(img4,x1,x2,100,300,350,150,100,200); //putting daughter3	
+	setInterval("anim()",350);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 198; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img5,x1,x2,198,350,350,150,170,200); //putting Maid1
+	vcon.drawImage(img4,0,0,100,300,20,150,100,200); //putting daughter3
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter2Background" alt= "" src="Images/Chapter2Background4.jpg" width="300" height="300">
+<img style="display:none;" id="Maid1" alt="" src="Images/MAID1.png"><br>
+<img style="display:none;" id="D3Sleep" alt="" src="Images/Daughter3SleepFinal.png">
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<body><p><font size="6" font color="Red">'Oh,' said Cap o' Rushes, 'I would have liked to see that lovely lady!'
+</font></body><br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+
+<FORM METHOD="LINK" ACTION="TheDaughterChapter3Scene4.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>
