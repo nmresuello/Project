@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter VII:<br> "The Wedding"
+</h2>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=180;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter3Background");
+	img5 = document.getElementById("Prince");
+	img2 = document.getElementById("Princess");
+	//vcon.drawImage(img1,0,0,714,366);
+	//vcon.drawImage(img2,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img3,0,0,90,100,200,300,80,80);
+	//vcon.drawImage(img4,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); 
+	setInterval("anim()",350);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 310; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img2,x1,y1,310,320,195,185,170,200); //putting PRINCESS
+	vcon.drawImage(img5,x1,y1,310,320,100,180,170,200); //putting COOK
+
+
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter3Background" alt= "" src="Images/chapter6bgscene1.png" width="300" height="300">
+<img style="display:none;" id="Prince" alt="" src="Images/1COOK4444.png">
+<img style="display:none;" id="Princess" alt="" src="Images/PRINCESS2COOK4444.png">
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<body><p><font size="6" font color="Blue">Soon a wedding was arranged between the master's on and Cap o' Rushes. 
+People from all over were invited to the wedding feast, including Cap o' Rushes own father. <br>Before the feast, Cap o' Rushes went into the kitchen and told the cook to put no salt in any of the dishes she prepared for the feast.
+'But that will make the food taste horrible,' protested the cook.
+'Never mind,' said Cap o' Rushes. 'Just do as I say.'
+
+</font></body><br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+
+<FORM METHOD="LINK" ACTION="TheDaughterChapter7Scene2.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>

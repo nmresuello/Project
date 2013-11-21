@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter IV:<br> "The Disguise"
+</h2>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter3Background");
+	img5 = document.getElementById("Dance");
+	img2 = document.getElementById("Maid1");
+	img3 = document.getElementById("Maid2");
+	//vcon.drawImage(img1,0,0,714,366);
+	//vcon.drawImage(img2,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img3,0,0,90,100,200,300,80,80);
+	//vcon.drawImage(img4,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); 
+	setInterval("anim()",250);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 310; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img5,x1,y1,310,320,70,150,170,200); //putting daughter3 Sleep
+	vcon.drawImage(img2,x1,x2,310,350,350,150,170,200); //putting Maid1
+	vcon.drawImage(img3,x1,x2,310,350,450,150,170,200); //putting Maid2
+
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter3Background" alt= "" src="Images/Chapter2Background4.jpg" width="300" height="300">
+<img style="display:none;" id="Dance" alt="" src="Images/DAUGHTER333333.png">
+<img style="display:none;" id="Maid1" alt="" src="Images/MAID111111.png"><br>
+<img style="display:none;" id="Maid2" alt="" src="Images/MAID2222223.png"><br>
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<body><p><font size="6" font color="Blue">The other maids and servants came home to find her sleeping in her corner as before. 'O Cap o' Rushes, ' they sighed. 
+'The beautiful lady was there again. The master's son danced with her all evening, and with no one else.'
+'O', said Cap o' Rushes again. ' I would have loved to see that!'
+
+</font></body><br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+
+<FORM METHOD="LINK" ACTION="TheDaughterChapter5Scene1.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>

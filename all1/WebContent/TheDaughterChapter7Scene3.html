@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter VII:<br> "The Wedding"
+</h2>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5, img6;
+var x1=0,y1=0,x2=0,y2=180;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter3Background");
+	img2 = document.getElementById("Daughter1");
+	img3 = document.getElementById("Daughter2");
+	img4 = document.getElementById("Daughter3");
+	img5 = document.getElementById("King");
+	img6 = document.getElementById("Prince");
+
+	//vcon.drawImage(img1,0,0,714,366);
+	//vcon.drawImage(img2,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img3,0,0,90,100,200,300,80,80);
+	//vcon.drawImage(img4,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); 
+	setInterval("anim()",350);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 310; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img2,x1,y1,310,320,170,150,170,200); //putting Daughter1
+	vcon.drawImage(img3,x1,y1,310,320,240,150,170,200); //putting Daughter2
+	vcon.drawImage(img4,x1,y1,310,320,300,150,170,200); //putting Daughter3
+	vcon.drawImage(img5,x1,y1,310,320,350,150,170,200); //putting King
+	vcon.drawImage(img6,x1,y1,310,320,420,140,170,200); //putting Prince
+
+
+
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter3Background" alt= "" src="Images/FINALBG.jpg" width="300" height="300">
+<img style="display:none;" id="Daughter1" alt="" src="Images/FINALDAUGHTER1.png">
+<img style="display:none;" id="Daughter2" alt="" src="Images/FINALDAUGHTER2.png">
+<img style="display:none;" id="Daughter3" alt="" src="Images/FINALDAUGHTER3.png">
+<img style="display:none;" id="King" alt="" src="Images/FINALKING.png">
+<img style="display:none;" id="Prince" alt="" src="Images/FINALPRINCE.png">
+
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<body><p><font size="6" font color="Blue">Cap o' Rushes and the master's son lived happily ever after, 
+and so did her father and her sisters.
+</font></body><br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+
+</FORM>
+</center>
+</body>
+</html>

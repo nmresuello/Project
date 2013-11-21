@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter III:<br> "The Meeting"
+</h2>
+
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter3Background");
+	img5 = document.getElementById("Prince");
+	img4 = document.getElementById("Dance");
+	vcon.drawImage(img1,0,0,714,366); //putting background
+	vcon.drawImage(img5,0,0,100,260,480,60,80,80); //putting Prince
+	vcon.drawImage(img4,0,0,100,300,350,150,100,200); //putting daughter3	
+	setInterval("anim()",250);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>2) counter=0;
+	x1=counter * 205; y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img5,0,0,90,300,400,150,100,200); //putting Prince
+	vcon.drawImage(img4,x1,x2,205,300,500,150,170,200); //putting daughter3
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter3Background" alt= "" src="Images/Chapter3Background.jpg" width="300" height="300">
+<img style="display:none;" id="Prince" alt="" src="Images/PrincePaintFinal.png"><br>
+<img style="display:none;" id="Dance" alt="" src="Images/DAUGHTER3DANCE.png">
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+
+</font></body><br>
+
+<body><p><font size="6" font color="Red">'Who are you?' he asked her. 'Where do you live?' But Cap o' Rushes only smiled and gave no answer. 
+Well before the dance was over, Cap o' Rushes slipped off home.</h3>
+
+<br>
+<br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+
+<FORM METHOD="LINK" ACTION="TheDaughterChapter3Scene3.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>

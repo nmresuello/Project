@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter III:<br> "The Meeting"
+</h2>
+
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter2Background");
+	img4 = document.getElementById("D3Sleep");
+	//vcon.drawImage(img1,0,0,714,366); //putting background
+	//vcon.drawImage(img4,x1,x2,100,300,350,150,100,200); //putting daughter3	
+	setInterval("anim()",350);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>2) counter=0;
+	x1=counter * 171; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img4,x1,y1,171,300,20,150,150,200); //putting daughter3
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter2Background" alt= "" src="Images/Chapter2Background4.jpg" width="300" height="300">
+<img style="display:none;" id="D3Sleep" alt="" src="Images/DAUGHTER3SLEEP.png">
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<br>
+
+<body><p><font size="6" font color="Blue">She quickly put on her hood and cloak of rushes again, 
+and lay down in her corner, pretending to be fast asleep.</font></body><br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+<FORM METHOD="LINK" ACTION="TheDaughterChapter3Scene4.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>

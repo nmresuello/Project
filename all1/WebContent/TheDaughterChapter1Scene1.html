@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter 1:<br> "The Questioning"
+</h2>
+<h3>This scene is about the daughters answering the question of their father<br> "How much do you love me, my dears?"</h3>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter1Background");
+	img2 = document.getElementById("Daughter1");
+	img4 = document.getElementById("Daughter2");
+	img3 = document.getElementById("RichMan");
+	img5 = document.getElementById("Daughter3");
+	//vcon.drawImage(img1,0,0,714,366);
+	//vcon.drawImage(img2,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img3,0,0,90,100,200,300,80,80);
+	//vcon.drawImage(img4,0,0,100,260,115,300,80,80);
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); 
+	setInterval("anim()",250);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 310; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img2,x1,y1,310,320,0,80,170,200); //putting Daughter1
+	vcon.drawImage(img3,x1,y1,310,260,250,40,170,200); //putting richman
+	vcon.drawImage(img4,x1,y1,310,300,480,70,170,200); //putting daughter2
+	vcon.drawImage(img5,x1,y1,310,320,580,100,170,200); //putting daughter3
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter1Background" alt= "" src="Images/Chapter1Background.jpg" width="300" height="300">
+<img style="display:none;" id="Daughter1" alt="" src="Images/DAUGHTER14444.png"><br>
+<img style="display:none;" id="Daughter2" alt="" src="Images/DAUGHTER24444.png"><br>
+<img style="display:none;" id="Daughter3" alt="" src="Images/DAUGHTER34444.png"><br>
+<img style="display:none;" id="RichMan" alt="" src="Images/RICHMAN4444.png"><br>
+<p><font size="6">Long long time ago, there lived a rich man and his three daughters.<br>
+One day, the rich man asked his daughters<br>
+One day, the rich man asked his daughters, 'How much do you love me, my dears?'<br>
+'Why, Father,' said the first daughter, ' I love you as much as life itself.'<br>
+'Oh, Father,' said the second daughter, 'I love you more than the entire world.'<br>
+The rich man was very pleased. Then he turned to his youngest daughter, and asked, <br>'And how much do you love me, my little one?'
+<br>'I love you as much as food loves salt, Father,' she replied, quietly.
+</font></p>
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<body><p><font size="6" font color="Blue">'How much do you love me, my dears?'
+</font></body>
+
+<FORM METHOD="LINK" ACTION="TheDaughterChapter1Scene2.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>

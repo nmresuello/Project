@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<center><title>The Daughter</title>
+</head>
+<h1>The Daughter</h1>
+<h2> Chapter II:<br> "The Suffering"
+</h2>
+<h3>This scene is about the 2nd daughter answering the question of her father<br> "How much do you love me, my dears?"</h3>
+<script type="text/javascript">
+var vcanvas, vcon, img1, img2, img3, img4, img5;
+var x1=0,y1=0,x2=0,y2=0;
+
+function loadimg() {
+	vcanvas = document.getElementById("drawing");
+	vcon = vcanvas.getContext("2d");
+	img1 = document.getElementById("Chapter2Background");
+	img3 = document.getElementById("Cook");
+	img5 = document.getElementById("Daughter3");
+	//vcon.drawImage(img1,0,0,714,366); //putting background
+	//vcon.drawImage(img3,0,0,100,100,200,300,80,80);
+	//vcon.drawImage(img5,0,0,100,260,480,60,80,80); //putting daughter3
+	setInterval("anim()",250);
+}
+var counter=0;
+function anim(){
+	counter++;
+	if (counter>3) counter=0;
+	x1=counter * 100; //y2=y2+10; //if(y2 >350) {y2=0; w2=80; h2=80;}
+	//w2+=5;h2 +=5;
+	vcon.drawImage(img1,0,0,714,366); //putting background 
+	vcon.drawImage(img3,0,0,310,310,350,160,300,200); //putting cook
+	vcon.drawImage(img5,x1,y1,100,300,550,160,100,200); //putting daughter3
+}
+
+</script>
+
+<body onload="loadimg()">
+<img style="display:none;" id="Chapter2Background" alt= "" src="Images/Chapter2Background2.jpg" width="300" height="300">
+<img style="display:none;" id="Daughter3" alt="" src="Images/Daughter3Final1.png"><br>
+<img style="display:none;" id="Cook" alt="" src="Images/COOK4444.png"><br>
+
+
+<br><canvas style="border-style:inset;"
+id="drawing" width="714" height="366">
+Browser does not support html5</canvas>
+<body><p><font size="6" font color="Red">'I have nowhere to go, and nowhere to stay,' said the girl.<br> 'I'll do any sort of work for you, and ask only for food and a roof to sleep under in return.'
+</font></body><br>
+
+<input action="action" type="button" 
+value="Back" onclick="history.go(-1);"/>
+
+<FORM METHOD="LINK" ACTION="TheDaughterChapter2Scene4.html">
+<INPUT TYPE="submit" VALUE="Next Button">
+</FORM>
+</center>
+</body>
+</html>
